@@ -4,13 +4,16 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "tfmini_ros_node");
   ros::NodeHandle nh("~");
-  std::string id = "TFmini";
+  std::string id;
   std::string portName;
   int baud_rate;
   benewake::TFmini *tfmini_obj;
 
-  nh.param("serial_port", portName, std::string("/dev/ttyUSB0"));
-  nh.param("baud_rate", baud_rate, 115200);
+  // nh.param("serial_port", portName, std::string("/dev/ttyUSB0"));
+  // nh.param("baud_rate", baud_rate, 115200);
+  ros::param::get("~serial_port", portName);
+  ros::param::get("~baud_rate", baud_rate);
+  ros::param::get("~frame_id", id);
 
   tfmini_obj = new benewake::TFmini(portName, baud_rate);
   ros::Publisher pub_range = nh.advertise<sensor_msgs::Range>(id, 1000, true);

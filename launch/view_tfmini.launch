@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find tfmini_ros)/launch/tfmini.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tfmini_ros)/rviz/view.rviz" />
+</launch>
