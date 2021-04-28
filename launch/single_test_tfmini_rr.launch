@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tfmini_rr" output="screen">
+    <param name="serial_port" value="/dev/recipe.driver.tfmini.rr" />
+    <param name="baud_rate" value="115200" />
+    <param name="frame_id" value="TFmini_rr" />
+  </node>
+</launch>
