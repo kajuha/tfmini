@@ -1,4 +1,6 @@
 <launch>
+  <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini_fr" args="0.46 0.61 0 1.57 0 0  base_link TFmini_fr 100" />
+  <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini_br" args="0.46 -0.61 0 -1.57 0 0 base_link TFmini_br 100" />
   <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini_rf" args="0.56 0.51 0 0 0 0  base_link TFmini_rf 100" />
   <node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini_rb" args="0.56 -0.51 0 0 0 0 base_link TFmini_rb 100" />
 </launch>
