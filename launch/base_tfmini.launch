@@ -1,0 +1,25 @@
+<launch>
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tfmini_rf" output="screen">
+    <param name="serial_port" value="/dev/recipe.driver.tfmini.rf" />
+    <param name="baud_rate" value="115200" />
+    <param name="frame_id" value="TFmini_rf" />
+  </node>
+
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tfmini_rb" output="screen">
+    <param name="serial_port" value="/dev/recipe.driver.tfmini.rb" />
+    <param name="baud_rate" value="115200" />
+    <param name="frame_id" value="TFmini_rb" />
+  </node>
+
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tfmini_fr" output="screen">
+    <param name="serial_port" value="/dev/recipe.driver.tfmini.fr" />
+    <param name="baud_rate" value="115200" />
+    <param name="frame_id" value="TFmini_fr" />
+  </node>
+
+  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tfmini_br" output="screen">
+    <param name="serial_port" value="/dev/recipe.driver.tfmini.br" />
+    <param name="baud_rate" value="115200" />
+    <param name="frame_id" value="TFmini_br" />
+  </node>
+</launch>

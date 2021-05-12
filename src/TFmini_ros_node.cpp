@@ -31,8 +31,8 @@ int main(int argc, char **argv)
     ros::spinOnce();
     dist = tfmini_obj->getDist();
 
-    static int count = 0;
-    printf("dist : %f mm, %d cnt\r\n", dist, count++);
+    // static int count = 0;
+    // printf("dist : %f mm, %d cnt\r\n", dist, count++);
 
     if(dist > 0 && dist < TFmini_range.max_range)
     {

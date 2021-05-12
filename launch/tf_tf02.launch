@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="broadcasterTF02_fr" args="0.46 0.61 0 1.57 0 0  base_link TF02_fr 100" />
+  <node pkg="tf" type="static_transform_publisher" name="broadcasterTF02_br" args="0.46 -0.61 0 -1.57 0 0 base_link TF02_br 100" />
+</launch>
