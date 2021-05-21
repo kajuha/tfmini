@@ -1,11 +1,11 @@
 <launch>
-  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tf02_fr" output="screen">
+  <node pkg="tfmini" type="tfmini" name="tf02_fr" output="screen">
     <param name="serial_port" value="/dev/recipe.driver.tf02.fr" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_fr" />
   </node>
 
-  <node pkg="tfmini_ros" type="tfmini_ros_node" name="tfmini_ros_node_tf02_br" output="screen">
+  <node pkg="tfmini" type="tfmini" name="tf02_br" output="screen">
     <param name="serial_port" value="/dev/recipe.driver.tf02.br" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_br" />

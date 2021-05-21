@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(tfmini_ros)
+project(tfmini)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -101,7 +101,7 @@ find_package(Boost REQUIRED COMPONENTS system)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-#  LIBRARIES TFmini_ros
+#  LIBRARIES tfmini
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
@@ -115,27 +115,27 @@ catkin_package(
  include_directories(${catkin_INCLUDE_DIRS} include)
 
 ## Declare a C++ library
-# add_library(TFmini_ros
-#   src/${PROJECT_NAME}/TFmini_ros.cpp
+# add_library(tfmini
+#   src/${PROJECT_NAME}/tfmini.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(TFmini_ros ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(tfmini ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
- add_executable(tfmini_ros_node 
-   src/TFmini_ros_node.cpp
+ add_executable(tfmini 
+   src/main.cpp
    src/TFmini.cpp
  )
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(TFmini_ros_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(tfmini ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(tfmini_ros_node
+ target_link_libraries(tfmini
    ${catkin_LIBRARIES}
  )
  
@@ -155,7 +155,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -std=gnu++11")
 # )
 
 ## Mark executables and/or libraries for installation
- install(TARGETS tfmini_ros_node tfmini_ros_node
+ install(TARGETS tfmini
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -181,7 +181,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -std=gnu++11")
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_TFmini_ros.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_tfmini.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

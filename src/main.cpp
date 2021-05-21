@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "tfmini_ros_node");
+  ros::init(argc, argv, "tfmini");
   ros::NodeHandle nh("~");
   std::string id;
   std::string portName;
