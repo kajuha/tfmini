@@ -1,7 +1,7 @@
 <launch>
-  <include file="$(find tfmini_ros)/launch/base_tf02.launch" />
+  <include file="$(find tfmini)/launch/base_tf02.launch" />
 
-  <include file="$(find tfmini_ros)/launch/tf_tf02.launch" />
+  <include file="$(find tfmini)/launch/tf_tf02.launch" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tfmini_ros)/rviz/view.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tfmini)/rviz/view_tf02.rviz" />
 </launch>
