@@ -1,13 +1,13 @@
 <launch>
-  <arg name="output_type" default="screen" doc="output type"/>
+  <arg name="message_display" default="screen" doc="output type"/>
   
-  <node pkg="tfmini" type="tfmini" name="tf02_fr" output="$(arg output_type)">
+  <node pkg="tfmini" type="tfmini" name="tf02_fr" output="$(arg message_display)">
     <param name="serial_port" value="/dev/recipe.driver.tf02.fr" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_fr" />
   </node>
 
-  <node pkg="tfmini" type="tfmini" name="tf02_br" output="$(arg output_type)">
+  <node pkg="tfmini" type="tfmini" name="tf02_br" output="$(arg message_display)">
     <param name="serial_port" value="/dev/recipe.driver.tf02.br" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_br" />

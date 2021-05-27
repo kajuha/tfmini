@@ -1,6 +1,6 @@
 <launch>
   <include file="$(find tfmini)/launch/base_tf02.launch">
-    <arg name="output_type" value="screen"/>
+    <arg name="message_display" value="screen"/>
   </include>
 
   <include file="$(find tfmini)/launch/tf_tf02.launch" />
