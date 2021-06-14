@@ -1,15 +1,21 @@
 <launch>
   <arg name="message_display" default="screen" doc="output type"/>
+  <arg name="timeout_sec" default="0.3" doc="sensor timeout"/>
+  <arg name="main_hz" default="1000" doc="main loop herz"/>
   
-  <node pkg="tfmini" type="tfmini" name="tf02_fr" output="$(arg message_display)">
+  <node pkg="tfmini" type="tfmini" name="tf02_fr" output="$(arg message_display)" respawn="true">
     <param name="serial_port" value="/dev/recipe.driver.tf02.fr" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_fr" />
+    <param name="timeout_sec" value="$(arg timeout_sec)" />
+    <param name="main_hz" value="$(arg main_hz)" />
   </node>
 
-  <node pkg="tfmini" type="tfmini" name="tf02_br" output="$(arg message_display)">
+  <node pkg="tfmini" type="tfmini" name="tf02_br" output="$(arg message_display)" respawn="true">
     <param name="serial_port" value="/dev/recipe.driver.tf02.br" />
     <param name="baud_rate" value="115200" />
     <param name="frame_id" value="TF02_br" />
+    <param name="timeout_sec" value="$(arg timeout_sec)" />
+    <param name="main_hz" value="$(arg main_hz)" />
   </node>
 </launch>
